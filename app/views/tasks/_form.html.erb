@@ -1,0 +1,47 @@
+<%= form_with(model: task, local: true) do |form| %>
+  <% if task.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(task.errors.count, "error") %> prohibited this task from being saved:</h2>
+
+      <ul>
+      <% task.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :登録した人 %>
+    <%= form.text_field :登録した人 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :タスクの内容 %>
+    <%= form.text_area :タスクの内容 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :登録日時 %>
+    <%= form.datetime_select :登録日時 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :更新日時 %>
+    <%= form.datetime_select :更新日時 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :締切日 %>
+    <%= form.date_select :締切日 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :picture %>
+    <%= form.file_field :picture, id: :task_picture %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

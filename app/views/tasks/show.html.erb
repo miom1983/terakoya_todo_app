@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>登録した人:</strong>
+  <%= @task.登録した人 %>
+</p>
+
+<p>
+  <strong>タスクの内容:</strong>
+  <%= @task.タスクの内容 %>
+</p>
+
+<p>
+  <strong>登録日時:</strong>
+  <%= @task.登録日時 %>
+</p>
+
+<p>
+  <strong>更新日時:</strong>
+  <%= @task.更新日時 %>
+</p>
+
+<p>
+  <strong>締切日:</strong>
+  <%= @task.締切日 %>
+</p>
+
+<p>
+  <strong>Picture:</strong>
+  <%= image_tag(@task.picture_url) if @task.picture.present? %>
+</p>
+
+<%= link_to 'Edit', edit_task_path(@task) %> |
+<%= link_to 'Back', tasks_path %>
