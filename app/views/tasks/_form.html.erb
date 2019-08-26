@@ -17,6 +17,11 @@
   </div>
 
   <div class="field">
+    <%= form.label :タスクの担当者 %>
+    <%= form.text_field :pic, id: :task_pic %>
+  </div>
+
+  <div class="field">
     <%= form.label :タスクの内容 %>
     <%= form.text_area :タスクの内容 %>
   </div>
@@ -28,7 +33,7 @@
 
   <div class="field">
     <%= form.label :更新日時 %>
-    <%= form.datetime_select :更新日時 %>
+      <%= Time.current %>
   </div>
 
   <div class="field">

@@ -69,6 +69,6 @@ class TasksController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def task_params
-      params.require(:task).permit(:登録した人, :タスクの内容, :登録日時, :更新日時, :締切日, :picture)
+      params.require(:task).permit(:登録した人, :pic, :タスクの内容, :登録日時, :更新日時, :締切日, :picture)
     end
 end

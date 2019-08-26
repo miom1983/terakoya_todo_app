@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_08_21_032108) do
+ActiveRecord::Schema.define(version: 2019_08_26_015222) do
 
   create_table "tasks", force: :cascade do |t|
     t.string "登録した人"
@@ -21,6 +21,7 @@ ActiveRecord::Schema.define(version: 2019_08_21_032108) do
     t.datetime "updated_at", null: false
     t.date "締切日"
     t.string "picture"
+    t.string "pic"
   end
 
 end
