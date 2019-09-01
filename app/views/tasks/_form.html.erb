@@ -21,15 +21,17 @@
     <%= form.text_area :タスクの内容 %>
   </div>
 
+
   <div class="field">
-    <%= form.label :登録日時 %>
-    <%= form.datetime_select :登録日時 %>
+    <%= form.label :登録日時＿画面上非表示にする予定 %>
+    <%= @task.created_at %>
   </div>
 
   <div class="field">
-    <%= form.label :更新日時 %>
-    <%= form.datetime_select :更新日時 %>
+    <%= form.label :更新日時＿画面上非表示にする予定 %>
+    <%=  @task.updated_at %>
   </div>
+
 
   <div class="field">
     <%= form.label :締切日 %>
